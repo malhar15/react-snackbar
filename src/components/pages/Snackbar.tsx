@@ -8,7 +8,7 @@ const Snackbar: React.FC = () => {
     showSnackbar("Hey! Here's the Success snackbar!", 'success');
   };
 
-  const handleHideSnackbar = async () => {
+  const handleHideSnackbar = () => {
     showSnackbar("Hey! Here's the Error snackbar!", 'error');
   };
 
@@ -17,8 +17,9 @@ const Snackbar: React.FC = () => {
       sx={{
         display: 'flex',
         height: '100vh',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
+        gap: '12px'
       }}
     >
       <Button variant="contained" onClick={handleShowSnackbar}>

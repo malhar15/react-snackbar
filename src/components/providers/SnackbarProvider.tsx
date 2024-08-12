@@ -8,7 +8,11 @@ const SnackbarContext = createContext<ShowSnackbarHandler>(() => {
   console.error('Component is not wrapped with a SnackbarProvider.');
 });
 
-const SnackbarProvider: React.FC<{ children: React.ReactNode }> = ({
+interface SnackbarProviderProps {
+  children: React.ReactNode;
+}
+
+const SnackbarProvider: React.FC< SnackbarProviderProps > = ({
   children,
 }) => {
   const [open, setOpen] = useState(false);
